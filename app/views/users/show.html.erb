@@ -6,6 +6,9 @@
         <%= gravatar_for @user %>
         <%= @user.name %>
       </h1>
+      <%= "Current Time: #{Time.now}"  %>
+      <%= "Created At: #{@user.created_at}"  %>
+      <%= "Updated At: #{@user.updated_at}"  %>
     </section>
   </aside>
 </div>
