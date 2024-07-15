@@ -6,6 +6,9 @@ class User < ApplicationRecord
   validates :email, presence: true, length: { maximum: 255 },
                     format: { with: VALID_EMAIL_REGEX },
                     uniqueness: true
+  # pre-requisite: Users table has a password_digest column
+  # generates virtual attributes, password and password_confirmation
+  # generates authenticate method returns the user when the password is correct
   has_secure_password
   validates :password, presence: true, length: { minimum: 6 }
 end
