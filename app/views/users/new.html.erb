@@ -4,6 +4,12 @@
 <div class="row">
   <div class="col-md-6 col-md-offset-3">
     <%= form_with(model: @user) do |f| %>
+      <%
+=begin%>
+ render error_messages partial using @user.errors.full_messages 
+<%
+=end
+%>
       <%= render 'shared/error_messages' %>
 
       <%= f.label :name %>
